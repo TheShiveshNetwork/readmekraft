@@ -1,0 +1,155 @@
+.markdown::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.markdown::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+}
+
+.markdown::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+}
+
+.markdown::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+}
+
+.markdown::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #296ac0;
+}
+
+.markdown::-webkit-scrollbar-thumb:hover {
+    background-color: #62A34B;
+}
+
+.markdown::-webkit-scrollbar-thumb:active {
+    background-color: #62A34B;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+    margin: 1.5em 0 0.5em;
+    font-weight: bold;
+}
+
+.markdown h1 {
+    font-size: 2em;
+}
+
+.markdown h2 {
+    font-size: 1.75em;
+}
+
+.markdown h3 {
+    font-size: 1.5em;
+}
+
+.markdown h4 {
+    font-size: 1.25em;
+}
+
+.markdown h5 {
+    font-size: 1em;
+}
+
+.markdown h6 {
+    font-size: 0.875em;
+    color: #666;
+}
+
+/* Paragraphs */
+.markdown p {
+    margin: 1em 0;
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+.markdown ul {
+    list-style-type: disc;
+}
+
+.markdown ol {
+    list-style-type: decimal;
+}
+
+.markdown li {
+    margin: 0.5em 0;
+}
+
+/* Links */
+.markdown a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.markdown a:hover {
+    text-decoration: underline;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+    margin: 1.5em 0;
+    padding: 0.5em 1em;
+    border-left: 4px solid #ddd;
+    color: #666;
+    background-color: #f9f9f9;
+}
+
+/* Code blocks */
+.markdown pre,
+.markdown code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.markdown pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+
+.markdown code {
+    padding: 0.2em 0.4em;
+}
+
+/* Horizontal Rules */
+.markdown hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+}
+
+/* Tables */
+.markdown table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+.markdown th,
+.markdown td {
+    border: 1px solid #ddd;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+.markdown th {
+    background-color: #f2f2f2;
+}
+
+.markdown td {
+    background-color: #fff;
+}
