@@ -33,7 +33,7 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     const getThemeData = async () => {
         const filePath = path.resolve(markdownPath + `/${selectedTheme}`);
         console.log(filePath)
-        const fileData = await getFileData(filePath);
+        const fileData = await getFileData("./markdowns/README", selectedTheme);
         setThemeContent(fileData);
     }
 
