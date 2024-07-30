@@ -3,9 +3,8 @@ import path from 'path';
 import CreateReadmePage from '@/components/pages/CreateReadmePage';
 
 const CreateReadme = () => {
-    const markdownPath = path.resolve("./markdowns/README");
-    console.log(`current: ${markdownPath}`);
-    const files = fs.readdirSync(markdownPath);
+    const markdownPath = "./markdowns/README";
+    const files = fs.readdirSync(path.resolve(markdownPath));
     
     return <CreateReadmePage themeFiles={files} markdownPath={markdownPath} />;
 }

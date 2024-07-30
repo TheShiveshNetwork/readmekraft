@@ -10,7 +10,6 @@ import { FormatThemeData } from '@/actions/themeDataFormat';
 import { Button } from '../ui/button';
 import { Check, CopyIcon } from 'lucide-react';
 import { useToast } from '../ui/use-toast';
-import path from 'path';
 
 type Props = {
     themeFiles: string[];
@@ -31,9 +30,7 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const getThemeData = async () => {
-        const filePath = path.resolve(markdownPath + `/${selectedTheme}`);
-        console.log(filePath)
-        const fileData = await getFileData("./markdowns/README", selectedTheme);
+        const fileData = await getFileData(markdownPath, selectedTheme);
         setThemeContent(fileData);
     }
 

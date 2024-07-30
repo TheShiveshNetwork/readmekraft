@@ -2,9 +2,10 @@
 
 import { formData } from "@/types";
 import { getFileData } from "./getFileData";
+import path from "path";
 
 export async function FormatThemeData(formData: formData, markdownPath: string, selectedTheme: string) {
-    const filePath = `${markdownPath}\\${selectedTheme}`;
+    const filePath = path.resolve(markdownPath + "/" + selectedTheme);
     const fileData = await getFileData(markdownPath, selectedTheme);
     let res: string = fileData;
     res = res.replace("${{name}}", formData.name);
