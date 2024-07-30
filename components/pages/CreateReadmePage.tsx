@@ -30,7 +30,7 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const getThemeData = async () => {
-        const filePath = `${markdownPath}\\${selectedTheme}`;
+        const filePath = `${markdownPath}/${selectedTheme}`;
         const fileData = await getFileData(filePath);
         setThemeContent(fileData);
     }
