@@ -1,42 +1,32 @@
 "use client";
 
-import CreateReadmeForm from '@/components/CreateReadmeForm'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { formData } from '@/types';
-import React, { useEffect, useState } from 'react';
-import RenderMarkdown from '../RenderMarkdown';
-import { getFileData } from '@/actions/getFileData';
-import { FormatReadmeThemeData } from '@/actions/themeDataFormat';
-import { Button } from '../ui/button';
-import { Check, CopyIcon } from 'lucide-react';
-import { useToast } from '../ui/use-toast';
-import { allLanguages } from '@/constants';
+import { FormatConductData } from "@/actions/themeDataFormat";
+import { useEffect, useState } from "react";
+import { useToast } from "../ui/use-toast";
+import { conductFormData } from "@/types";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+import { Button } from "../ui/button";
+import { Check, CopyIcon } from "lucide-react";
+import RenderMarkdown from "../RenderMarkdown";
+import CreateCodeOfConductForm from "../CreateCodeOfConductForm";
 
 type Props = {
     themeFiles: string[];
     markdownPath: string;
 }
 
-const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
+const CreateCodeOfConductPage = ({ themeFiles, markdownPath }: Props) => {
     const { toast } = useToast();
     const [selectedTheme, setSelectedTheme] = useState(themeFiles[0]);
-    const [formData, setFormData] = useState<formData>({
-        githubUsername: "TheShiveshNetwork",
-        headline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, repudiandae. Eum temporibus voluptate praesentium magnam?",
-        description: `Write a short description about yourself. 
-- you can use markdown formats
-        `,
-        name: "Shivesh",
-        websiteUrl: "https://shitworks.co/",
-        holopinUrl: "https://holopin.me/theshiveshnetwork",
-        languages: allLanguages,
-        otherLink: "https://buymeacoffee.com/mrdevknown404",
+    const [formData, setFormData] = useState<conductFormData>({
+        name: "Project",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, harum sequi dolorem ex adipisci, id cum possimus neque veniam porro autem voluptatibus qui.",
     });
     const [themeContent, setThemeContent] = useState("");
     const [isCopied, setIsCopied] = useState(false);
 
     const getThemeData = async () => {
-        const newData = await FormatReadmeThemeData(formData, markdownPath, selectedTheme);
+        const newData = await FormatConductData(formData, markdownPath, selectedTheme);
         setThemeContent(newData);
     }
 
@@ -45,7 +35,7 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     }, [markdownPath, selectedTheme])
 
     const handleButtonClick = async () => {
-        const newData = await FormatReadmeThemeData(formData, markdownPath, selectedTheme);
+        const newData = await FormatConductData(formData, markdownPath, selectedTheme);
         setThemeContent(newData);
     }
 
@@ -62,9 +52,9 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     }
 
     return (
-        <div className='w-full flex flex-col md:flex-row p-4 gap-4 min-h-screen h-auto md:h-screen bg-gray-100 dark:bg-black'>
+        <div className='w-full flex flex-col md:flex-row p-4 gap-4 min-h-screen md:h-screen bg-gray-100 dark:bg-black'>
             <div className="w-full md:w-1/3 shadow-lg rounded-lg p-8 h-full bg-white">
-                <CreateReadmeForm formData={formData} setFormData={setFormData} handleButtonClick={handleButtonClick} />
+                <CreateCodeOfConductForm formData={formData} setFormData={setFormData} handleButtonClick={handleButtonClick} />
             </div>
             <div className="w-full md:w-2/3 shadow-lg rounded-lg h-full bg-white">
                 <div className="flex gap-4 w-full justify-end p-2">
@@ -92,4 +82,4 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     )
 }
 
-export default CreateReadmePage
+export default CreateCodeOfConductPage

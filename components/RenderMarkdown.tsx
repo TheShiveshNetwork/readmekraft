@@ -11,7 +11,7 @@ type Props = {
 
 const RenderMarkdown = ({ themeContent }: Props) => {
     return (
-        <div className="markdown h-[calc(100%-80px)] w-full overflow-y-auto box-border p-4">
+        <div className="markdown-body h-[calc(100%-80px)] w-full overflow-y-auto box-border p-4">
             <ReactMarkdown children={themeContent} rehypePlugins={[rehypeRaw]} />
         </div>
     )

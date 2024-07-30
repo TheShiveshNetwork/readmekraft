@@ -14,9 +14,9 @@ const Navbar = (props: Props) => {
                         <Link className="flex flex-shrink-0 items-center" href="/">
                             <Image
                                 className="block h-12 w-auto"
-                                src="https://www.svgrepo.com/show/501888/donut.svg"
-                                height={20}
-                                width={20}
+                                src="/assets/logo.png"
+                                height={100}
+                                width={100}
                                 alt=""
                             />
                         </Link>

@@ -4,6 +4,8 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { formData } from "@/types";
 import { Button } from "./ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { allLanguages } from "@/constants";
 
 type Props = {
     formData: formData;
@@ -38,7 +40,22 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick }: Props) =
             <Input type="text" id="headline" placeholder="Enter headline" className="mb-2" value={formData.headline} onChange={handleFormChange} />
 
             <Label htmlFor="description">Description</Label>
-            <Textarea placeholder="Type your short description here." id="description" value={formData.description} onChange={handleFormChange} />
+            <Textarea placeholder="Type your short description here in Markdown format." id="description" className="mb-2" value={formData.description} onChange={handleFormChange} />
+
+            <Label htmlFor="languages">Languages</Label>
+            <Select onValueChange={(value) => setFormData({ ...formData, languages: [...formData.languages, value] })}>
+                <SelectTrigger className="mb-2">
+                    <SelectValue placeholder="Choose languages" />
+                </SelectTrigger>
+                <SelectContent>
+                    {allLanguages.map((language, index) => (
+                        <SelectItem key={`theme-${index}`} value={language}>{language}</SelectItem>
+                    ))}
+                </SelectContent>
+            </Select>
+
+            <Label htmlFor="otherLink">Support / other Link</Label>
+            <Input type="text" id="otherLink" placeholder="Enter support link" className="mb-2" value={formData.otherLink} onChange={handleFormChange} />
 
             <div className="absolute bottom-0 flex w-full justify-end">
                 <Button onClick={handleButtonClick}>Submit</Button>
