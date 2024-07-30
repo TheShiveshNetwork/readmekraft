@@ -31,9 +31,7 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
     const [isCopied, setIsCopied] = useState(false);
 
     const getThemeData = async () => {
-        const filePath = path.resolve(markdownPath, selectedTheme);
-        console.log(filePath);
-        const fileData = await getFileData(filePath);
+        const fileData = await getFileData(`${markdownPath}\\${selectedTheme}`);
         setThemeContent(fileData);
     }
 
@@ -57,10 +55,6 @@ const CreateReadmePage = ({ themeFiles, markdownPath }: Props) => {
             setIsCopied(false);
         }, 2000)
     }
-
-    useEffect(() => {
-        console.log(`themeContent: ${themeContent}`);
-    }, [themeContent])
 
     return (
         <div className='w-full flex flex-col md:flex-row p-4 gap-4 min-h-screen h-auto md:h-screen bg-gray-100'>
