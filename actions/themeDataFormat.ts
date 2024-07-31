@@ -18,7 +18,6 @@ export async function FormatReadmeThemeData(formData: formData, markdownPath: st
         const languageContent = `<img src="https://github.com/devicons/devicon/blob/master/icons/${formData.languages[i]}/${formData.languages[i]}-original.svg" alt="${formData.languages[i]}" width="40" height="40"/>&nbsp;`
         languageSection += languageContent;
     }
-    console.log(languageSection)
     res = res.replaceAll("${{languages}}", languageSection);
     return res;
 }

@@ -2,12 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Props = {}
 
 const Navbar = (props: Props) => {
+    const pathname = usePathname();
+    
     return (
-        <div className="w-full z-50 border-b backdrop-blur-lg bg-opacity-80">
+        <div className={`w-full z-50 ${pathname === "/" && "bg-transparent absolute"}`}>
             <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 ">
                 <div className="relative flex h-16 justify-between">
                     <div className="flex flex-1 items-stretch justify-start">

@@ -9,6 +9,7 @@ import { Button } from "../ui/button";
 import { Check, CopyIcon } from "lucide-react";
 import CreateGuidelinesForm from "../CreateGuidelinesForm";
 import RenderMarkdown from "../RenderMarkdown";
+import { GenerateContentWithAI } from "@/actions/AIGeneration";
 
 type Props = {
     themeFiles: string[];
@@ -24,6 +25,7 @@ const CreateGuidelinesPage = ({ themeFiles, markdownPath }: Props) => {
     });
     const [themeContent, setThemeContent] = useState("");
     const [isCopied, setIsCopied] = useState(false);
+    const [generating, setGenerating] = useState(false);
 
     const getThemeData = async () => {
         const newData = await FormatGuidelinesData(formData, markdownPath, selectedTheme);
@@ -51,12 +53,18 @@ const CreateGuidelinesPage = ({ themeFiles, markdownPath }: Props) => {
         }, 2000)
     }
 
+    const getAIText = async () => {
+        setGenerating(true);
+        const systemPrompt = "You are an AI that can write SEO friendly README for github Projects. Write the content for the description section of this REAMDE in about 100 words. Use emojis, bullet points and make the README as attractive as possible.";
+        const res = await GenerateContentWithAI(systemPrompt, formData.description);
+        setGenerating(false);
+        setFormData({ ...formData, description: res })
+    }
+
     return (
-        <div className='w-full flex flex-col md:flex-row p-4 gap-4 min-h-screen h-auto md:h-screen bg-gray-100 dark:bg-black'>
-            <div className="w-full md:w-1/3 shadow-lg rounded-lg p-8 h-full bg-white">
-                <CreateGuidelinesForm formData={formData} setFormData={setFormData} handleButtonClick={handleButtonClick} />
-            </div>
-            <div className="w-full md:w-2/3 shadow-lg rounded-lg h-full bg-white">
+        <div className='w-full p-4 min-h-screen h-auto bg-gray-50 dark:bg-black'>
+            <CreateGuidelinesForm formData={formData} setFormData={setFormData} handleButtonClick={handleButtonClick} getAIText={getAIText} isAIGenerating={generating} />
+            <div className="w-full shadow-lg rounded-lg h-full bg-white">
                 <div className="flex gap-4 w-full justify-end p-2">
                     <Button variant={"outline"} className={`h-[40px] w-[40px] p-0 ${isCopied && "bg-green-300 hover:bg-green-300"}`} onClick={handleContentCopy}>
                         {!isCopied ?

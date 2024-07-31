@@ -4,7 +4,7 @@ type Props = {}
 
 const Footer = (props: Props) => {
     return (
-        <footer className="w-full border-t">
+        <footer className="w-full">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="py-16 flex justify-between items-center flex-col gap-8 lg:flex-row">
                     <a href="https://pagedone.io/" className="flex justify-center ">
