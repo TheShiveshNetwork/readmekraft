@@ -16,7 +16,7 @@ const Navbar = (props: Props) => {
                     <div className="flex flex-1 items-stretch justify-start">
                         <Link className="flex flex-shrink-0 items-center" href="/">
                             <Image
-                                className="block h-12 w-auto"
+                                className="block h-10 w-auto"
                                 src="/assets/logo.png"
                                 height={100}
                                 width={100}
