@@ -6,6 +6,8 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -29,6 +31,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
         <header>
           <Navbar />
         </header>
