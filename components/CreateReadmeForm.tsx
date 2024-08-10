@@ -31,7 +31,7 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
     };
 
     return (
-        <div className="fixed flex justify-end w-full max-w-[400px] z-50 right-4 bottom-4">
+        <div className="fixed flex justify-end md:w-full max-w-[400px] z-50 right-4 bottom-4">
             {!expand ? (
                 <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 shadow-lg cursor-pointer">
                     <Edit2 />
