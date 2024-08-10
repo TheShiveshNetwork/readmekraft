@@ -29,7 +29,7 @@ export default function Home() {
             <Link href={"/createFiles"}>Create md Files</Link>
           </Button>
           <Button asChild className="bg-blue-500 hover:bg-blue-600">
-            <Link href={"/createReadme"}>Create REAME</Link>
+            <Link href={"/createReadme"}>Create README</Link>
           </Button>
         </div>
         <Image
