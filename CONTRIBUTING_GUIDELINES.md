@@ -20,25 +20,24 @@ Make sure you have the following installed on your machine:
 
 ### Setting Up the Project
 
-1. **Fork the repository**
-Fork the repository to make all the commits there and then create a PR.
+1. **Fork the repository**:
+Make all the commits there and then create a PR.
 
 3. **Clone the repository**:
-
+Clone the repository you have just created by forking [READMEKRAFT](https://github.com/TheShiveshNetwork/readmekraft) then navigate inside the cloned directory.
    ```bash
-   git clone https://github.com/yourusername/readmekraft.git
+   git clone https://github.com/<yourusername>/readmekraft.git
    cd readmekraft
-
+   
 4. **Install Dependencies**:
 Depending on your package manager, run one of the following commands:
-
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    # or
-    bun install
+```bash
+npm install
+```
+Or
+```bash
+yarn install
+```
 
 5. **Start the development server**:
 
@@ -76,6 +75,6 @@ The application will be available at http://localhost:3000.
 
 
 ## License ##
-    By contributing to examples, you agree that your contributions will be licensed under the LICENSE file in the root directory of this source tree.
+By contributing to examples, you agree that your contributions will be licensed under the [LICENSE](https://github.com/TheShiveshNetwork/readmekraft/blob/main/LICENSE) file in the root directory of this source tree.
 
 ## We look forward to your contributions! Thank you for helping to make ReadmeKraft better. ##
