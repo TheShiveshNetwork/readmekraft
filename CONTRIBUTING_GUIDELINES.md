@@ -6,6 +6,11 @@ We want to make contributing to this project as easy and transparent as possible
 
 To get started with contributing, you'll need to set up the project on your local machine.
 
+### Rules and Instructions
+Make sure that you don't violate these rules.
+- Don't create duplicate Issues.
+- Don't start working beforing commenting on the issue and unless you are assigned to that issue.
+
 ### Prerequisites
 
 Make sure you have the following installed on your machine:
@@ -15,24 +20,26 @@ Make sure you have the following installed on your machine:
 
 ### Setting Up the Project
 
-1. **Clone the repository**:
+1. **Fork the repository**:
+Make all the commits there and then create a PR.
 
+3. **Clone the repository**:
+Clone the repository you have just created by forking [READMEKRAFT](https://github.com/TheShiveshNetwork/readmekraft) then navigate inside the cloned directory.
    ```bash
-   git clone https://github.com/yourusername/readmekraft.git
+   git clone https://github.com/<yourusername>/readmekraft.git
    cd readmekraft
-
-2. **Install Dependencies**:
+   
+4. **Install Dependencies**:
 Depending on your package manager, run one of the following commands:
+```bash
+npm install
+```
+Or
+```bash
+yarn install
+```
 
-    npm install
-    # or
-    yarn install
-    # or
-    pnpm install
-    # or
-    bun install
-
-3. **Start the development server**:
+5. **Start the development server**:
 
 To start the development server, run:
     npm run dev
@@ -68,6 +75,6 @@ The application will be available at http://localhost:3000.
 
 
 ## License ##
-    By contributing to examples, you agree that your contributions will be licensed under the LICENSE file in the root directory of this source tree.
+By contributing to examples, you agree that your contributions will be licensed under the [LICENSE](https://github.com/TheShiveshNetwork/readmekraft/blob/main/LICENSE) file in the root directory of this source tree.
 
 ## We look forward to your contributions! Thank you for helping to make ReadmeKraft better. ##
