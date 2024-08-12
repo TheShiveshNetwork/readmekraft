@@ -6,6 +6,11 @@ We want to make contributing to this project as easy and transparent as possible
 
 To get started with contributing, you'll need to set up the project on your local machine.
 
+### Rules and Instructions
+Make sure that you don't violate these rules.
+- Don't create duplicate Issues.
+- Don't start working beforing commenting on the issue and unless you are assigned to that issue.
+
 ### Prerequisites
 
 Make sure you have the following installed on your machine:
@@ -15,13 +20,16 @@ Make sure you have the following installed on your machine:
 
 ### Setting Up the Project
 
-1. **Clone the repository**:
+1. **Fork the repository**
+Fork the repository to make all the commits there and then create a PR.
+
+3. **Clone the repository**:
 
    ```bash
    git clone https://github.com/yourusername/readmekraft.git
    cd readmekraft
 
-2. **Install Dependencies**:
+4. **Install Dependencies**:
 Depending on your package manager, run one of the following commands:
 
     npm install
@@ -32,7 +40,7 @@ Depending on your package manager, run one of the following commands:
     # or
     bun install
 
-3. **Start the development server**:
+5. **Start the development server**:
 
 To start the development server, run:
     npm run dev
