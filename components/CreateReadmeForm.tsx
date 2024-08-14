@@ -91,13 +91,13 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
                             )}
                         </div>
                         <div className="flex flex-col gap-2">
-                            <div className={`p-4 rounded-full transition-all shadow-md ${selected === "details" && "bg-blue-400 text-white"}`} onClick={() => setSelected("details")}>
+                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "details" && "bg-blue-400 text-white"}`} onClick={() => setSelected("details")}>
                                 <User />
                             </div>
-                            <div className={`p-4 rounded-full transition-all shadow-md ${selected === "description" && "bg-blue-400 text-white"}`} onClick={() => setSelected("description")}>
+                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "description" && "bg-blue-400 text-white"}`} onClick={() => setSelected("description")}>
                                 <LetterText />
                             </div>
-                            <div className={`p-4 rounded-full transition-all shadow-md ${selected === "tools" && "bg-blue-400 text-white"}`} onClick={() => setSelected("tools")}>
+                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "tools" && "bg-blue-400 text-white"}`} onClick={() => setSelected("tools")}>
                                 <PenTool />
                             </div>
                         </div>
