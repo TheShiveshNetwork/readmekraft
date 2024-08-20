@@ -71,11 +71,11 @@
 Here's an overview of what the READMEKRAFT project looks like:
 
 ### Home Page
-<img src="public/assets/home.png" alt="Home Page" width="600"/>
-
+[<img src="public/assets/home.png" alt="Home Page" width="600"/>
+](https://github.com/Code-Hacker26/readmekraft/blob/8d4be02b9e132f17b0c082c88b324327e3f0677b/public/assets/home.png)
 ### Services
-<img src="public/assets/services.png" alt="Services Page" width="600"/>
-
+[<img src="public/assets/services.png" alt="Services Page" width="600"/>
+](https://github.com/Code-Hacker26/readmekraft/blob/8d4be02b9e132f17b0c082c88b324327e3f0677b/public/assets/services.png)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
