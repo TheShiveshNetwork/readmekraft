@@ -18,12 +18,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][[contributors-url](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)]
-[![Forks][forks-shield]][[forks-url](https://github.com/TheShiveshNetwork/readmekraft/forks)]
-[![Stargazers][stars-shield]][[stars-url](https://github.com/TheShiveshNetwork/readmekraft/stargazers)]
-[![Issues][issues-shield]][[issues-url](https://github.com/TheShiveshNetwork/readmekraft/issues)]
-[![GPL-2.0 License][license-shield]][[license-url](https://github.com/TheShiveshNetwork/readmekraft?tab=GPL-2.0-1-ov-file#readme)]
-
+![Contributors][contributors-shield]
+![Forks][forks-shield]
+![Stargazers][stars-shield]
+![Issues][issues-shield]
+![GPL-2.0 License][license-shield]
 
 
 <!-- PROJECT LOGO -->
@@ -70,7 +69,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Here's an overview of what the READMEKRAFT project looks like:
+
+### Home Page
+<img src="/assets/home.png" alt="Home Page" width="600"/>
+
+<img src="/assets/services.png" alt="Services Page" width="600"/>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 
 **READMEKRAFT** is a powerful tool designed to help developers create comprehensive and professional README files for their projects. Whether you're working on a small open-source project or a large enterprise application, READMEKRAFT provides a streamlined way to generate, edit, and maintain your project documentation.
 
@@ -85,7 +94,6 @@ This section lists the major frameworks, libraries, and tools used to build READ
 * [![Node.js][Node.js]][Node-url]
 * [![Tailwind CSS][Tailwind.css]][Tailwind-url]
 * [![Vercel][Vercel]][Vercel-url]
-* [![ESLint][ESLint]][ESLint-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -102,26 +110,46 @@ Before you begin, ensure you have met the following requirements:
 * Node.js and npm installed.
   ```sh
   npm install npm@latest -g
+  ```
 
 ### Installation
 
 Follow these steps to install and set up READMEKRAFT:
 
 1. **Clone the Repository:**
-   ```bash
+   ```sh
    git clone https://github.com/TheShiveshNetwork/READMEKRAFT.git
+   ```
 
 2. **Navigate into the Project Directory:**
-    ```bash
+    ```sh
     cd READMEKRAFT
+    ```
 
 3. **Install NPM Packages:**
-    ```bash
+    ```sh
     npm install
+    ```
+
+4. **Get Gemini API Key:**
+
+  Visit the <a href="https://ai.google.dev/gemini-api/docs/api-key">Gemini API documentation</a> 
+  to generate an API key.
+
+
+5. **Create .env.local File:**
+
+  In the root of your project directory, create a file named .env.local.
+  Paste your Gemini API key in the following format:
+  ```sh
+  NEXT_PUBLIC_GEMINI_API=your_api_key_here
+  ```
 
 4. **Run the Development Server:**
-    ```bash
+    ```sh
     npm run dev
+    ```
+
 
 5. **Open Your Browser:**
     Navigate to http://localhost:3000 to see the application running.
@@ -139,33 +167,23 @@ Here are some examples of how to use READMEKRAFT:
 To get started with READMEKRAFT, you can follow these simple examples:
 
 1. **Starting the Development Server:**
-   ```bash
+   ```sh
    npm run dev
+   ```
    # or
+   ```sh
    yarn dev
+   ```
    # or
+   ```sh
    pnpm dev
+   ```
    # or
+   ```sh
    bun dev
+   ```
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-Here's what we have planned for the future of READMEKRAFT:
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates with Examples
-- [ ] Implement a "components" document for easy copy & paste sections
-- [ ] Multi-language Support
-    - [ ] Hindi
-    - [ ] Spanish
-
-See the [open issues](https://github.com/TheShiveshNetwork/READMEKRAFT/issues) for a full list of proposed features and known issues.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTRIBUTING -->
@@ -187,17 +205,20 @@ For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDE
    Once you have forked the project, clone it to your local machine:
    ```sh
    git clone https://github.com/your-username/READMEKRAFT.git
+   ```
 
 3. **Create a New Branch**
     Create a branch for your feature or fix:
      ```sh
     git checkout -b feature/YourFeatureName
+    ```
 
 
 4. **Commit Your Changes**
     Commit your changes with a clear and descriptive message:
     ```sh
-    git commit -m 'Add feature: YourFeatureName'
+     git commit -m 'Add feature: YourFeatureName'
+    ```
 
 5. **Push to Your Branch**
 
@@ -205,6 +226,7 @@ For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDE
 
     ```sh
     git push origin feature/YourFeatureName 
+    ```
 
 6. **Open a Pull Request**
     Navigate to the original repository, and click the "New Pull Request" button.
@@ -244,7 +266,6 @@ We'd like to give credit to the following resources and tools that have been inv
 * [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Detailed guides and documentation for JavaScript.
 * [TypeScript Documentation](https://www.typescriptlang.org/docs/) - Comprehensive resources and guides for TypeScript.
 * [Vercel Documentation](https://vercel.com/docs) - Resources and guides for deploying with Vercel.
-* [ESLint Documentation](https://eslint.org/docs) - Information on using and configuring ESLint.
 * [Shields.io](https://shields.io) - Badges for GitHub repositories.
 * [Font Awesome](https://fontawesome.com) - Icons and toolkits for web development.
 * [React Icons](https://react-icons.github.io/react-icons) - A library of icons for React applications.
@@ -279,5 +300,4 @@ We'd like to give credit to the following resources and tools that have been inv
 [Tailwind-url]: https://tailwindcss.com/
 [Vercel]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [Vercel-url]: https://vercel.com/
-[ESLint]: https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white
-[ESLint-url]: https://eslint.org/
+
