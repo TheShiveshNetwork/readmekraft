@@ -18,18 +18,12 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors](https://img.shields.io/github/contributors/TheShiveshNetwork/readmekraft)](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)
+[![Contributors][contributors-shield]](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)
 
-![Forks][forks-shield]
-![Stargazers][stars-shield]
-![Issues][issues-shield]
-![GPL-2.0 License][license-shield]
-
-<!-- [![Contributors][contributors-shield]][[contributors-url](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)]
-[![Forks][forks-shield]][[forks-url](https://github.com/TheShiveshNetwork/readmekraft/forks)]
-[![Stargazers][stars-shield]][[stars-url](https://github.com/TheShiveshNetwork/readmekraft/stargazers)]
-[![Issues][issues-shield]][[issues-url](https://github.com/TheShiveshNetwork/readmekraft/issues)]
-[![GPL-2.0 License][license-shield]][[license-url](https://github.com/TheShiveshNetwork/readmekraft?tab=GPL-2.0-1-ov-file#readme)] -->
+[![Forks][forks-shield]](https://github.com/TheShiveshNetwork/readmekraft/forks)
+![Stargazers][stars-shield](https://github.com/TheShiveshNetwork/readmekraft/stargazers)
+![Issues][issues-shield](https://github.com/TheShiveshNetwork/readmekraft/issues)
+![GPL-2.0 License][license-shield](https://github.com/TheShiveshNetwork/readmekraft?tab=GPL-2.0-1-ov-file#readme)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -78,9 +72,9 @@
 Here's an overview of what the READMEKRAFT project looks like:
 
 ### Home Page
-<img src="/assets/home.png" alt="Home Page" width="600"/>
+<img src="public/assets/home.png" alt="Home Page" width="600"/>
 
-<img src="/assets/services.png" alt="Services Page" width="600"/>
+<img src="public/assets/services.png" alt="Services Page" width="600"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
