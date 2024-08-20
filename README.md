@@ -19,7 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)
-
 [![Forks][forks-shield]](https://github.com/TheShiveshNetwork/readmekraft/forks)
 [![Stargazers][stars-shield]](https://github.com/TheShiveshNetwork/readmekraft/stargazers)
 [![Issues][issues-shield]](https://github.com/TheShiveshNetwork/readmekraft/issues)
