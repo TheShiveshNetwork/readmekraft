@@ -18,12 +18,17 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-![Contributors][contributors-shield]
+![[Contributors][contributors-shield][(https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)]]
 ![Forks][forks-shield]
 ![Stargazers][stars-shield]
 ![Issues][issues-shield]
 ![GPL-2.0 License][license-shield]
 
+[![Contributors][contributors-shield]][[contributors-url](https://github.com/TheShiveshNetwork/readmekraft/graphs/contributors)]
+[![Forks][forks-shield]][[forks-url](https://github.com/TheShiveshNetwork/readmekraft/forks)]
+[![Stargazers][stars-shield]][[stars-url](https://github.com/TheShiveshNetwork/readmekraft/stargazers)]
+[![Issues][issues-shield]][[issues-url](https://github.com/TheShiveshNetwork/readmekraft/issues)]
+[![GPL-2.0 License][license-shield]][[license-url](https://github.com/TheShiveshNetwork/readmekraft?tab=GPL-2.0-1-ov-file#readme)]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -193,7 +198,7 @@ Contributions are what make the open-source community an amazing place to learn,
 
 If you have an idea for improving the project, please fork the repository and create a pull request. You can also open an issue with the "enhancement" tag to start a discussion. 
 
-For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDELINES.md](./CONTRIBUTION_GUIDELINES.md) file.
+For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDELINES.md](https://github.com/TheShiveshNetwork/readmekraft/blob/main/CONTRIBUTING_GUIDELINES.md) file.
 
 
 ### Steps to Contribute:
