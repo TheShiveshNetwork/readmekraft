@@ -39,6 +39,7 @@
   <a href="#contributing">Contributing</a> •
   <a href="#license">License</a>
 </p>
+</div>
 
 <details>
   <summary>Table of Contents</summary>
@@ -70,14 +71,9 @@
 
 Here's an overview of what the READMEKRAFT project looks like:
 
-### Home Page
 [<img src="public/assets/home.png" alt="Home Page" width="600"/>
 ](https://github.com/Code-Hacker26/readmekraft/blob/8d4be02b9e132f17b0c082c88b324327e3f0677b/public/assets/home.png)
-### Services
-[<img src="public/assets/services.png" alt="Services Page" width="600"/>
-](https://github.com/Code-Hacker26/readmekraft/blob/8d4be02b9e132f17b0c082c88b324327e3f0677b/public/assets/services.png)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
@@ -193,7 +189,7 @@ Contributions are what make the open-source community an amazing place to learn,
 
 If you have an idea for improving the project, please fork the repository and create a pull request. You can also open an issue with the "enhancement" tag to start a discussion. 
 
-For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDELINES.md](https://github.com/TheShiveshNetwork/readmekraft/blob/main/CONTRIBUTING_GUIDELINES.md) file.
+For detailed guidelines on contributing, please refer to the [CONTRIBUTION_GUIDELINES.md](https://github.com/TheShiveshNetwork/readmekraft/blob/main/CONTRIBUTING.md) file.
 
 
 ### Steps to Contribute:
