@@ -31,16 +31,16 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
     };
 
     return (
-        <div className="fixed flex justify-end md:w-full max-w-[400px] z-50 right-4 bottom-4">
+        <div className="fixed flex justify-end max-w-[90%] sm:w-full sm:max-w-[400px] z-50 right-4 bottom-4">
             {!expand ? (
                 <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 shadow-lg cursor-pointer">
                     <Edit2 />
                 </div>
             ) : (
-                <div className="p-4 w-full bg-white rounded-md shadow-lg">
-                    <h1 className="text-xl font-semibold mb-4">Create Profile Readme</h1>
-                    <div className="flex justify-between w-full gap-4">
-                        <div className="w-full">
+                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-white rounded-md shadow-lg">
+                    <h1 className="text-xl w-full font-semibold mb-4">Create Profile Readme</h1>
+                    <div className="flex justify-start md:justify-between w-full gap-4">
+                        <div className="w-3/4">
                             {selected === "details" && (
                                 <>
                                     <Label htmlFor="name">Name</Label>
@@ -62,7 +62,7 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
                                     <Label htmlFor="headline">Headline</Label>
                                     <Input type="text" id="headline" placeholder="Enter headline" className="mb-2" value={formData.headline} onChange={handleFormChange} />
 
-                                    <div className="flex justify-between items-center">
+                                    <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-center">
                                         <Label htmlFor="description">Description</Label>
                                         <Button onClick={getAIText} disabled={isAIGenerating} className="bg-blue-500 hover:bg-purple-300 flex gap-1 items-center px-2 h-6 text-sm">
                                             {isAIGenerating && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -70,7 +70,7 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
                                             Generate with AI
                                         </Button>
                                     </div>
-                                    <Textarea placeholder="Type your short description here in Markdown format." id="description" className="mb-2" rows={10} value={formData.description} onChange={handleFormChange} />
+                                    <Textarea placeholder="Type your short description here in Markdown format." id="description" className="my-2" rows={10} value={formData.description} onChange={handleFormChange} />
                                 </>
                             )}
 
@@ -90,14 +90,14 @@ const CreateReadmeForm = ({ formData, setFormData, handleButtonClick, getAIText,
                                 </>
                             )}
                         </div>
-                        <div className="flex flex-col gap-2">
-                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "details" && "bg-blue-400 text-white"}`} onClick={() => setSelected("details")}>
+                        <div className="flex flex-col gap-2 w-8 sm:w-14">
+                            <div className={`p-1 sm:p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "details" && "bg-blue-400 text-white"}`} onClick={() => setSelected("details")}>
                                 <User />
                             </div>
-                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "description" && "bg-blue-400 text-white"}`} onClick={() => setSelected("description")}>
+                            <div className={`p-1 sm:p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "description" && "bg-blue-400 text-white"}`} onClick={() => setSelected("description")}>
                                 <LetterText />
                             </div>
-                            <div className={`p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "tools" && "bg-blue-400 text-white"}`} onClick={() => setSelected("tools")}>
+                            <div className={`p-1 sm:p-4 rounded-full transition-all shadow-md cursor-pointer ${selected === "tools" && "bg-blue-400 text-white"}`} onClick={() => setSelected("tools")}>
                                 <PenTool />
                             </div>
                         </div>
