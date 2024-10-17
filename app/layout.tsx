@@ -8,6 +8,8 @@ import { Toaster } from "@/components/ui/toaster";
 
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 
+import {ThemeProvider as NextThemesProvider} from "next-themes";
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -31,16 +33,18 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER || ""} />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
-        <header>
-          <Navbar />
-        </header>
-        <main className="w-full min-h-screen">
-          {children}
-        </main>
-        <Footer />
-        <Toaster />
+        <NextThemesProvider attribute="class" defaultTheme="dark">
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER || ""} />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
+          <header>
+            <Navbar />
+          </header>
+          <main className="w-full min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </NextThemesProvider>
       </body>
     </html>
   );

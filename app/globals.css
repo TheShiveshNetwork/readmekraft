@@ -29,6 +29,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --gradient-bg: radial-gradient(ellipse at center, #cee6ff, #ffffff);
   }
 
   .dark {
@@ -56,6 +57,8 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --background-color-dark: #000000;
+    --gradient-bg-dark: radial-gradient(ellipse at center, #152037, #000000);
   }
 }
 
@@ -64,6 +67,19 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    
+    transition: background-color 0.5s ease, color 0.3s ease, background-image 0.3s ease;
+    
+    /* background-color: var(--gradient-bg); */
+    /* background-image: var(--gradient-bg); */
+    /* background-size: cover; */
   }
+  
+  
+  .dark body {
+    background-image: var(--gradient-bg-dark);
+  }
+
+  
 }

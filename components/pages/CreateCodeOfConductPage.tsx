@@ -62,9 +62,9 @@ const CreateCodeOfConductPage = ({ themeFiles, markdownPath }: Props) => {
     }
 
     return (
-        <div className='w-full p-4 min-h-screen h-auto bg-gray-50 dark:bg-black'>
+        <div className='w-full p-4 min-h-screen h-auto bg-gray-50 dark:bg-zinc-900'>
             <CreateCodeOfConductForm formData={formData} setFormData={setFormData} handleButtonClick={handleButtonClick} getAIText={getAIText} isAIGenerating={generating} />
-            <div className="w-full shadow-lg rounded-lg h-full bg-white">
+            <div className="w-full shadow-lg rounded-lg h-full bg-background dark:shadow-zinc-600">
                 <div className="flex gap-4 w-full justify-end p-2">
                     <Button variant={"outline"} className={`h-[40px] w-[40px] p-0 ${isCopied && "bg-green-300 hover:bg-green-300"}`} onClick={handleContentCopy}>
                         {!isCopied ?
