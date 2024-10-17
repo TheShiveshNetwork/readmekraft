@@ -31,34 +31,34 @@ const CreateProjectReadmeForm = ({ formData, setFormData, handleButtonClick, get
     return (
         <div className="fixed flex justify-end max-w-[90%] md:w-full md:max-w-[400px] z-50 right-4 bottom-4">
             {!expand ? (
-                <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 shadow-lg cursor-pointer">
+                <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 dark:bg-slate-900 dark:text-white shadow-lg cursor-pointer">
                     <Edit2 />
                 </div>
             ) : (
-                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-white rounded-md shadow-lg">
+                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-background rounded-md shadow-lg">
                     <h1 className="text-xl w-full font-semibold mb-4">Create Project Readme</h1>
                     <div className="flex justify-start md:justify-between w-full gap-4">
                         <div className="w-3/4">
                             {selected === "details" && (
                                 <>
             <Label htmlFor="name">Name</Label>
-            <Input type="text" id="name" placeholder="Enter name" className="mb-2" value={formData.name} onChange={handleFormChange} />
+            <Input type="text" id="name" placeholder="Enter name" className="mb-2 bg-secondary" value={formData.name} onChange={handleFormChange} />
 
             <Label htmlFor="githubUsername">Github Username</Label>
-            <Input type="text" id="githubUsername" placeholder="Enter username" className="mb-2" value={formData.githubUsername} onChange={handleFormChange} />
+            <Input type="text" id="githubUsername" placeholder="Enter username" className="mb-2 bg-secondary" value={formData.githubUsername} onChange={handleFormChange} />
 
             <Label htmlFor="websiteUrl">WebsiteUrl</Label>
-            <Input type="text" id="websiteUrl" placeholder="Enter username" className="mb-2" value={formData.websiteUrl} onChange={handleFormChange} />
+            <Input type="text" id="websiteUrl" placeholder="Enter username" className="mb-2 bg-secondary" value={formData.websiteUrl} onChange={handleFormChange} />
 
             <Label htmlFor="contactLink">Contact Link</Label>
-            <Input type="text" id="contactLink" placeholder="Enter support link" className="mb-2" value={formData.contactLink} onChange={handleFormChange} />
+            <Input type="text" id="contactLink" placeholder="Enter support link" className="mb-2 bg-secondary" value={formData.contactLink} onChange={handleFormChange} />
             </>
                             )}
 
                             {selected === "description" && (
                                 <>
                                 <Label htmlFor="headline">Headline</Label>
-                                <Input type="text" id="headline" placeholder="Enter headline" className="mb-2" value={formData.headline} onChange={handleFormChange} />
+                                <Input type="text" id="headline" placeholder="Enter headline" className="mb-2 bg-secondary" value={formData.headline} onChange={handleFormChange} />
                     
             <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-center">
                 <Label htmlFor="description">Description</Label>
@@ -67,7 +67,7 @@ const CreateProjectReadmeForm = ({ formData, setFormData, handleButtonClick, get
                     Generate with AI
                 </Button>
             </div>
-            <Textarea placeholder="Type your short description here in Markdown format." id="description" rows={10} className="my-2" value={formData.description} onChange={handleFormChange} />
+            <Textarea placeholder="Type your short description here in Markdown format." id="description" rows={10} className="mb-2 bg-secondary" value={formData.description} onChange={handleFormChange} />
             </>
                             )}
                         </div>

@@ -14,8 +14,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="w-full pt-20 flex flex-col min-h-screen items-center justify-center px-6 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#cee6ff] to-[#ffffff] pb-10">
-        <div className="rounded-full border-2 border-purple-500 px-4 py-1 bg-white bg-opacity-30 mt-14">
+      <div className="w-full pt-20 flex flex-col min-h-screen items-center justify-center px-6 transition-all ease-in-out pb-10">
+      {/* <div className="w-full pt-20 flex flex-col min-h-screen items-center justify-center px-6 bg-background bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#cee6ff] to-[#ffffff] dark:from-[#152037] dark:to-[#000000] transition-all duration-300 pb-10"> */}
+        <div className="rounded-full border-2 border-purple-500 px-4 py-1 bg-white dark:bg-inherit bg-opacity-30 mt-14">
           ✨ It's all free
         </div>
         <h1 className="text-4xl lg:text-6xl font-semibold w-full text-center lg:leading-[80px] max-w-[600px] mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500">
@@ -28,7 +29,7 @@ export default function Home() {
           <Button asChild variant={"outline"} className="bg-transparent hover:bg-transparent border border-blue-700 text-blue-700 hover:text-blue-500">
             <Link href={"/createFiles"}>Create md Files</Link>
           </Button>
-          <Button asChild className="bg-blue-500 hover:bg-blue-600">
+          <Button asChild className="bg-blue-500 hover:bg-blue-600 dark:text-white">
             <Link href={"/createReadme"}>Create README</Link>
           </Button>
         </div>
@@ -50,7 +51,7 @@ export default function Home() {
             Craft content effortlessly with integrated AI features
           </h1>
           <Image
-            src={"/assets/ai-clip.png"}
+            src="/assets/ai-clip.png"
             alt="hero"
             height={1000}
             width={1000}
@@ -58,7 +59,7 @@ export default function Home() {
           />
         </div>
         <div id="about" className="w-full px-6 md:px-40 mt-20 flex flex-col items-center">
-          <h1 className="max-w-[700px] text-3xl lg:text-4xl font-bold w-full mb-4 text-left bg-clip-text text-gray-600">
+          <h1 className="max-w-[700px] text-3xl lg:text-4xl font-bold w-full mb-4 text-left bg-clip-text text-gray-600 dark:text-gray-300">
             Craft Your Markdown Files
           </h1>
           <p className="max-w-[700px] text-justify text-lg textgray-800 mb-6">
@@ -78,13 +79,13 @@ export default function Home() {
           </p>
         </div>
         <div id="services" className="w-full px-6 md:px-40 mt-20 flex flex-col items-center">
-          <h1 className="text-3xl lg:text-4xl font-bold w-full mb-4 text-center bg-clip-text text-gray-600">
+          <h1 className="text-3xl lg:text-4xl font-bold w-full mb-4 text-center bg-clip-text text-gray-600 dark:text-gray-300">
             Create different files
           </h1>
           <div className="max-w-[700px] grid grid-cols-1 md:grid-cols-2 gap-4">
             {allCreateLinks.map((item) => (
               <Link key={item.href} href={item.href}>
-                <Card className="bg-blue-100 h-full">
+                <Card className="bg-blue-100 dark:bg-slate-900 h-full">
                   <CardHeader>
                     <CardTitle>{item.name}</CardTitle>
                     <CardDescription>{item.description}</CardDescription>
