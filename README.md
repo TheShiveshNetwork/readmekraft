@@ -66,6 +66,8 @@
   </ol>
 </details>
 
+<a href="https://discord.gg/Zpkdd83q">Join Discord</a>
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
