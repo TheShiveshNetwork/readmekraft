@@ -1,10 +1,28 @@
 "use client"
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function AISection() {
-    const { theme } = useTheme()
+  const { resolvedTheme } = useTheme();  // Get the correct theme after hydration
+  const [aiImage, setAiImage] = useState("/assets/ai-clip.png");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isMounted) {
+      const newImage = resolvedTheme === 'dark' ? "/assets/ai-clip-dark.jpg" : "/assets/ai-clip.png";
+      setAiImage(newImage);
+    }
+  }, [resolvedTheme, isMounted]);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <div>
         <div className="mt-20 flex flex-col items-center justify-center">
@@ -12,7 +30,7 @@ function AISection() {
             Craft content effortlessly with integrated AI features
           </h1>
           <Image
-          src={theme === 'dark' ? "/assets/ai-clip-dark.jpg" : "/assets/ai-clip.png"}
+          src={aiImage}
           alt="hero"
           height={1000}
           width={1000}

@@ -33,7 +33,7 @@ const CreateCodeOfConductForm = ({ formData, setFormData, handleButtonClick, get
                     <Edit2 />
                 </div>
             ) : (
-                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-background rounded-md shadow-lg">
+                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-background border-2 rounded-md shadow-lg">
                     <h1 className="text-xl font-semibold mb-4">Create Code of Conduct</h1>
                     <div className="flex justify-between md:justify-between w-full gap-4">
                         <div className="w-3/4">

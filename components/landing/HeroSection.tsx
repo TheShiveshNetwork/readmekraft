@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import AvatarStack from '../common/AvatarStack'
 import Image from 'next/image'
 import { Button } from '../ui/button'
@@ -7,7 +7,24 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 
 function HeroSection() {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();  // Get the correct theme after hydration
+  const [heroImage, setHeroImage] = useState("/assets/ai-clip.png");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isMounted) {
+      const newImage = resolvedTheme === 'dark' ? "/assets/hero-dark.png" : "/assets/hero.png";
+      setHeroImage(newImage);
+    }
+  }, [resolvedTheme, isMounted]);
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <div className='w-full pt-20 flex flex-col min-h-screen items-center justify-center px-6 transition-all ease-in-out '>
         <div className="rounded-full border-2 border-purple-500 px-4 py-1 bg-white dark:bg-inherit bg-opacity-30 mt-14">
@@ -28,7 +45,7 @@ function HeroSection() {
           </Button>
         </div>
         <Image
-          src={theme === 'dark' ? "/assets/hero-dark.png" : "/assets/hero.png"}
+          src={heroImage}
           alt="hero"
           height={1500}
           width={1500}
