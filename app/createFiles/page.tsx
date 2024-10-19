@@ -21,7 +21,7 @@ const CreateFiles = (props: Props) => {
             <div className="mt-8 grid gap-4 grid-cols-1 md:grid-cols-2">
                 {allCreateLinks.map((item) => (
                     <Link key={item.href} href={item.href}>
-                    <Card>
+                    <Card className="dark:bg-slate-950">
                         <CardHeader>
                             <CardTitle>{item.name}</CardTitle>
                             <CardDescription>{item.description}</CardDescription>

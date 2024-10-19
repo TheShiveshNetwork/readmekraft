@@ -31,18 +31,18 @@ const CreateGuidelinesForm = ({ formData, setFormData, handleButtonClick, getAIT
     return (
         <div className="fixed flex justify-end max-w-[90%] md:w-full md:max-w-[400px] z-50 right-4 bottom-4">
             {!expand ? (
-                <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 shadow-lg cursor-pointer">
+                <div onClick={() => setExpand(!expand)} className="p-4 w-16 h-16 flex items-center justify-center rounded-full bg-gray-50 dark:bg-slate-900 dark:text-white shadow-lg cursor-pointer">
                     <Edit2 />
                 </div>
             ) : (
-                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-white rounded-md shadow-lg">
+                <div className="p-4 max-w-[90%] md:w-full md:max-w-[400px] bg-background border-2 rounded-md shadow-lg">
                     <h1 className="text-xl w-full font-semibold mb-4">Create Project Guidelines</h1>
                     <div className="flex justify-start md:justify-between w-full gap-4">
                         <div className="w-3/4">
                             {selected === "details" && (
                                 <>
             <Label htmlFor="name">Project Name</Label>
-            <Input type="text" id="name" placeholder="Enter name" className="mb-2" value={formData.name} onChange={handleFormChange} />
+            <Input type="text" id="name" placeholder="Enter name" className="mb-2 bg-secondary" value={formData.name} onChange={handleFormChange} />
 
             <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-center">
                 <Label htmlFor="description">Description</Label>
@@ -51,7 +51,7 @@ const CreateGuidelinesForm = ({ formData, setFormData, handleButtonClick, getAIT
                     Generate with AI
                 </Button>
             </div>
-            <Textarea placeholder="Type your short description here in Markdown format." rows={10} id="description" className="my-2" value={formData.description} onChange={handleFormChange} />
+            <Textarea placeholder="Type your short description here in Markdown format." rows={10} id="description" className="mb-2 bg-secondary" value={formData.description} onChange={handleFormChange} />
             </>
                             )}
                         </div>
