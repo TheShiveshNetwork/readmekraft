@@ -67,19 +67,11 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    
-    transition: background-color 0.5s ease, color 0.3s ease, background-image 0.3s ease;
-    
-    /* background-color: var(--gradient-bg); */
-    /* background-image: var(--gradient-bg); */
-    /* background-size: cover; */
+    @apply text-foreground;    
+    transition: background-color 0.5s ease, color 0.3s ease;
   }
-  
   
   .dark body {
     background-image: var(--gradient-bg-dark);
   }
-
-  
 }
