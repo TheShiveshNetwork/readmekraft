@@ -5,6 +5,7 @@ We want to make contributing to this project as easy and transparent as possible
 ## Getting Started
 
 To get started with contributing, you'll need to set up the project on your local machine.
+- Join Our Discord Server: [Discord](https://discord.gg/Zpkdd83q)
 
 ### Rules and Instructions
 Make sure that you don't violate these rules.
